@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="gen_pass.css">
+    <script src="https://kit.fontawesome.com/45e38e596f.js" crossorigin="anonymous"></script>
+    <title>Générateur de mot de passe</title>
+</head>
+<body>
+    <div id="gen-pass">
+        <h1 id="txt">Générateur de mot de passe</h1>
+        <input type="text" id="input_pass" disabled>
+        <i class="fa fa-copy" aria-hidden="true" id="copy-btn" title="Copier le mot de passe"></i>
+        <br>
+        <input type="checkbox" name="caps" id="caps">
+        <label for="caps">Majuscules</label>
+        <input type="checkbox" name="nocaps" id="nocaps">
+        <label for="nocaps">Miniscules</label>
+        <input type="checkbox" name="numbers" id="numbers">
+        <label  for="numbers">Nombres</label>
+        <input type="checkbox" name="symbols" id="symbols" >
+        <label for="symbols">Symboles</label>
+        <br>
+        <label for="len">Longueur du mot de passe</label>
+        <input type="number" name="len" max="20" min="6" value="6" id="len">
+        <br>
+        <button id="gen-btn">Générer un mot de passe</button>
+    </div>
+
+    <script src="gen_pass.js"></script>
+    <script>
+        document.getElementById("input_pass").addEventListener("click", () => {
+            console.log("Cliqué !")
+        });
+    </script>
+</body>
+</html> 

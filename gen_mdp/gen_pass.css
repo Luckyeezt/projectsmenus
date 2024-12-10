@@ -1,0 +1,67 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(cyan,lime);
+}
+
+div#gen-pass {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+#gen-pass label {
+    margin-right: 10px;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #333;
+  }
+  
+
+h1#txt {
+    font-family: Helvetica;
+}
+
+#gen-btn {
+    font-weight: bold;
+    font-family: Helvetica;
+    margin-left: 120px;
+    margin-top: 3px;
+    font-size: 16px;
+    padding: 6px;
+    background-color: lime;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#gen-btn:hover {
+    opacity: 0.6;
+}
+
+#copy-btn {
+    cursor: pointer;
+}
+input[type="text"] {
+    margin-left: 95px;
+    width: 50%;
+    cursor: pointer;
+    padding: 5px;
+    font-weight: bolder;
+    border-color: black;
+    box-shadow: 1px 1px 1px 1px black;
+    margin-bottom: 10px;
+}
+
+input[type="checkbox"] {
+    accent-color:limegreen
+}
+
+label {
+    font-weight: bold;
+    
+}
