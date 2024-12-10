@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Number</title>
+    <link rel="stylesheet" href="gtn_css.css">
+</head>
+<body>
+    <div id="guess_tn_base">
+        <h1>Devine le nombre aléatoire </h1>
+        <label for="min">Nombre minimum</label>
+        <input type="number" name="min" min="0" id="nb_min" value="0">
+        <label for="max">Nombre maximum</label>
+        <input type="number" name="max" min="0" id="nb_max" value="0">
+        <label for="tries">Nombre d'essais</label>
+        <input type="number" min="0" max="20" id="tries_champ" value="0">
+        <br>
+        <label for="guessing" id="lb-guess" style="display:none">Devine le nombre</label>
+        <input type="number" id="user-input" style="display:none" min="0">
+        
+        <span id="result_input" style="display: none;"></span>
+
+        <button id="send_result" style="display: none;" onclick="verifResult()">Vérifier</button>
+
+        <button id="start-game" onclick="manage_game()">Démarrer la partie</button>
+        <p id="found_nbs"></p>
+        <p id="try_lasting"></p>
+    </div>
+
+    <script src="gtn_js.js"></script>
+</body>
+</html>

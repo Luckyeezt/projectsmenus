@@ -1,0 +1,103 @@
+body {
+    background: linear-gradient(cyan, lightblue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-size: 24px;
+}
+
+div#guess_tn_base {
+    background: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+div#guess_tn_base > h1 {
+    font-family: Helvetica;
+    text-align: center;
+}
+
+input[type="number"] {
+    border: 1px solid black;
+    border-radius: 10px;
+    font-weight: bold;
+    text-align: center;
+    padding: 1px;
+    font-size: 24px;
+    margin-bottom: 10px;
+    width: 250px;
+}
+
+div#guess_tn_base > label {
+    display: block;
+    color: #555;
+    font-family: Helvetica;
+    margin: 10px 0 5px;
+}
+
+button#start-game,
+button#send_result {
+    background: green;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin: 10px;
+}
+
+button#start-game:hover,
+button#send_result:hover {
+    opacity: 0.6;
+}
+
+/* Paragraphe pour afficher les résultats */
+#found_nbs, #try_lasting {
+    font-size: 14px;
+    color: #666;
+    margin-top: 15px;
+}
+
+#user_input {
+    font-size: 14px;
+    margin-left: 500px;
+}
+
+#found_nbs, #try_lasting {
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#send_result {
+    background-color: aqua;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#send_result {
+    display: inline-block; /* Pour le faire apparaître à côté de la zone de saisie */
+    margin-right: 10px; /* Espacement entre les boutons */
+}
+
+
+#result_input {
+    font-weight: bold;
+    font-family: Helvetica;
+}
