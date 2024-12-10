@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9; /* Met un background-color blanc cassé */
+}
+
+div.square { /* On vise les carrés du document (div avec la classe square) */
+    background: linear-gradient(red, orange, yellow); /* On background dégradé pour chaque carré */
+    width: 100%; /* On leur donne la largeur de 100 % du  parent (change rien) ? */
+    border: 2px solid black; /* Met une bordure noire autour de chaque carré */
+    padding-top: 100%; /* Assure un carré grâce au ratio largeur/hauteur */
+    position: relative; /* Nécessaire pour centrer le contenu avec flexbox */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+div.square:hover {
+    transform: scale(1.05); /* Effet de zoom au survol */
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+div.grid {
+    display: grid;
+    grid-template-columns: repeat(5, 250px); /* Taille fixe pour les carrés */
+    gap: 15px; /* Espacement entre les carrés */
+    justify-content: center; /* Centre la grille horizontalement */
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-family: Helvetica, sans-serif;
+    color: #333;
+    margin-top: 20px;
+}
+
+.projet-name {
+    font-weight: bold;
+    font-size: 20px;
+    font-family: Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    color: white
+}
+/* Responsive : 1 carré par ligne sur les petits écrans */
+@media (max-width: 600px) {
+    div.grid {
+        grid-template-columns: 1fr; /* Une seule colonne */
+        gap: 10px; /* Réduction de l'espacement pour un affichage harmonieux */
+        padding: 10px;
+    }
+
+    div.square {
+        width: 100%; /* Les carrés s'étendent pour occuper toute la largeur */
+    }
+}
